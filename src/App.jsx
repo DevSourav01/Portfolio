@@ -1,6 +1,13 @@
-import React from "react";
+// import Navbar from "./component/Navbar";
+// import Main from "./component/Main";
+// import Skills from "./component/Skills";
+// import Experience from "./component/Experience";
+// import Projects from "./component/Projects";
+// import Contact from "./component/Contact";
+
 import Navbar from "./Component/Navbar";
-import Main from "./Component/Main";
+
+import Main from "./Component/main";
 import Skills from "./Component/Skills";
 import Experience from "./Component/Experience";
 import Projects from "./Component/Projects";
