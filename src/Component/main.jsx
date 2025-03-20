@@ -1,4 +1,5 @@
 import React from "react";
+import picofme from "../assets/picofme.png";
 
 function Main() {
   return (
@@ -19,7 +20,7 @@ function Main() {
       {/* Right Section */}
       <div className="right w-full md:w-[30vw] flex justify-center mt-10 md:mt-0">
         <img
-          src="/src/assets/picofme.png"
+          src={picofme}
           alt="Sourav Nandui"
           className="w-64 h-64 object-cover rounded-full border-4 border-amber-500 shadow-lg relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-8 before:border-amber-500 before:blur-lg before:opacity-75 before:animate-pulse"
         />
