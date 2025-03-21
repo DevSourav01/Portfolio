@@ -7,11 +7,23 @@ const skillsData = [
   { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, level: 85 },
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, level: 95 },
   { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" />, level: 90 },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500" />, level: 80 },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss className="text-teal-500" />,
+    level: 80,
+  },
   { name: "Redux", icon: <SiRedux className="text-purple-500" />, level: 75 },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-700" />, level: 70 },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript className="text-blue-700" />,
+    level: 70,
+  },
   { name: "Git", icon: <FaGitAlt className="text-red-500" />, level: 85 },
-  { name: "ChatGPT API", icon: <SiOpenai className="text-green-500" />, level: 90 },
+  {
+    name: "ChatGPT API",
+    icon: <SiOpenai className="text-green-500" />,
+    level: 90,
+  },
 ];
 
 function Skills() {
@@ -29,11 +41,16 @@ function Skills() {
 
   return (
     <div className="skills-container max-w-4xl mx-auto mt-20 p-6 bg-[rgb(22,22,22)] rounded-lg">
-      <h2 className="text-4xl font-bold text-white text-center mb-6">My Skills</h2>
+      <h2 className="text-4xl font-bold text-white text-center mb-6">
+        My Skills
+      </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {skillsData.map((skill, index) => (
-          <div key={index} className="skill-card flex flex-col items-center p-4 bg-[rgb(23,23,23)] shadow-md cursor-pointer rounded-lg transition-transform transform hover:scale-105">
+          <div
+            key={index}
+            className="skill-card flex flex-col items-center p-4 bg-[rgb(23,23,23)] shadow-md cursor-pointer rounded-lg transition-transform transform hover:scale-105"
+          >
             {/* Icon */}
             <div className="text-5xl mb-2 transition-transform transform hover:scale-110">
               {skill.icon}
@@ -48,8 +65,6 @@ function Skills() {
                 style={{ width: `${progress[skill.name] || 0}%` }}
               ></div>
             </div>
-
-           
           </div>
         ))}
       </div>

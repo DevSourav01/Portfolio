@@ -14,22 +14,36 @@ function Main() {
         {/* Typing Animation */}
         <TypeAnimation
           sequence={[
-            "Passionate Frontend Developer", // Text 1
-            1500, // Pause for 1.5s
-            "Crafting modern & responsive UIs", // Text 2
+            "<Passionate Frontend Developer />",
             1500,
-            "Bringing designs to life with React", // Text 3
+            "<Crafting modern & responsive UIs />",
+            1500,
+            "<Bringing designs to life with React />",
             1500,
           ]}
           wrapper="p"
           speed={70}
           repeat={Infinity}
           className="text-2xl text-white mt-4"
+          cursor={false}
+          render={(text) => <p dangerouslySetInnerHTML={{ __html: text }} />}
         />
 
-        <button className="mt-6 px-6 py-3 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
-          Let's Connect
-        </button>
+        <a
+          href="/Sourav_Nandi_CV.pdf"
+          download="Sourav_Nandi_CV.pdf"
+          className="mt-6 mr-5"
+        >
+          <button className="px-6 py-3 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
+            Download CV
+          </button>
+        </a>
+
+        <a href="mailto:thugsourav1998@gmail.com">
+          <button className="mt-6 px-6 py-3 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
+            Hire Me
+          </button>
+        </a>
       </div>
 
       {/* Right Section with Glow Effect */}
