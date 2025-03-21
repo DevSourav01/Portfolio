@@ -57,7 +57,7 @@ function Main() {
           <img
             src={picofme}
             alt="Sourav Nandui"
-            className="relative w-64 h-64 object-cover rounded-full border-4 border-amber-500 shadow-lg"
+            className="relative w-64 h-64 object-cover rounded-full border-2 border-amber-500 shadow-lg"
           />
         </div>
       </div>

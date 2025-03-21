@@ -40,7 +40,7 @@ function Projects() {
   return (
     <div className="max-w-5xl mx-auto mt-20 p-10 bg-[rgb(22,22,22)] min-h-screen rounded-lg shadow-md">
       <h2 className="text-5xl font-extrabold text-white text-center border-l-4 border-amber-500 pl-4 mb-10">
-        My Projects
+        Projects
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

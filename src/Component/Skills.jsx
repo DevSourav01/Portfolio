@@ -42,7 +42,7 @@ function Skills() {
   return (
     <div className="skills-container max-w-4xl mx-auto mt-20 p-6 bg-[rgb(22,22,22)] rounded-lg">
       <h2 className="text-4xl font-bold text-white text-center mb-6">
-        My Skills
+        Skills
       </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
