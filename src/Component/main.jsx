@@ -6,7 +6,7 @@ import picofme from "../assets/picofme.png";
 
 function Main() {
   return (
-    <div className="main flex flex-col md:flex-row items-center justify-between p-10 min-h-screen">
+    <div className="main flex flex-col md:flex-row items-center justify-between min-h-screen">
       {/* Left Section */}
       <div className="left w-full md:w-[60vw] p-6 border-l-4 border-amber-500 shadow-md rounded-lg bg-[rgb(22,22,22)]">
         <h1 className="text-5xl  text-white leading-tight">
