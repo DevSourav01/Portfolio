@@ -8,17 +8,35 @@ function Navbar() {
   };
 
   return (
-    <div className="fixed top-5 left-1/2 transform -translate-x-1/2 w-[70vw] max-w-[500px] min-w-[305px] flex items-center justify-center gap-3 px-6 py-3 bg-[rgb(23,23,23)] border border-cyan-400 shadow-lg rounded-full z-50 transition-all duration-300 animate-glow">
-      {navItems.map((item) => (
-        <p
-          key={item}
-          onClick={() => handleScroll(item)}
-          className="cursor-pointer text-white text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300 hover:text-cyan-400"
-        >
-          {item}
-        </p>
-      ))}
-    </div>
+    <>
+      {/* Desktop Navbar (Top) */}
+      <div className="fixed top-5 left-1/2 transform -translate-x-1/2 w-[70vw] max-w-[500px] min-w-[305px]  items-center justify-center gap-3 px-6 py-3 bg-[rgb(23,23,23)] border border-cyan-400 shadow-lg rounded-full z-50 transition-all duration-300 animate-glow 
+      hidden sm:flex">
+        {navItems.map((item) => (
+          <p
+            key={item}
+            onClick={() => handleScroll(item)}
+            className="cursor-pointer text-white text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300 hover:text-cyan-400"
+          >
+            {item}
+          </p>
+        ))}
+      </div>
+
+      {/* Mobile Navbar (Bottom) */}
+      <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 w-[70vw] max-w-[500px] min-w-[305px] flex items-center justify-center gap-3 px-6 py-3 bg-[rgb(23,23,23)] border border-cyan-400 shadow-lg rounded-full z-50 transition-all duration-300 animate-glow 
+      sm:hidden">
+        {navItems.map((item) => (
+          <p
+            key={item}
+            onClick={() => handleScroll(item)}
+            className="cursor-pointer text-white text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300 hover:text-cyan-400"
+          >
+            {item}
+          </p>
+        ))}
+      </div>
+    </>
   );
 }
 
