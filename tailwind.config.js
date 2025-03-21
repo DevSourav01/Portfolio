@@ -1,9 +1,10 @@
+// tailwind.config.js
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
-        xs: { max: "425px" }, // Corrected: added inside `extend`
+        xs: { max: "425px" }, // Custom breakpoint for small screens
       },
       keyframes: {
         glow: {
@@ -12,7 +13,10 @@ export default {
         },
       },
       animation: {
-        glow: "glow 1.5s infinite alternate",
+        glow: "glow 1.5s infinite alternate", // Applying the glow animation
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'], // Add Poppins font to Tailwind
       },
     },
   },

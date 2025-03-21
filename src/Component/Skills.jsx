@@ -20,7 +20,7 @@ const skillsData = [
   },
   { name: "Git", icon: <FaGitAlt className="text-red-500" />, level: 85 },
   {
-    name: "ChatGPT API",
+    name: "ChatGPT",
     icon: <SiOpenai className="text-green-500" />,
     level: 90,
   },

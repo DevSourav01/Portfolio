@@ -1,4 +1,5 @@
 import React from "react";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -15,7 +16,7 @@ function Contact() {
         <div>
           <label className="block text-white font-semibold">Name</label>
           <input
-           required
+            required
             type="text"
             className="w-full p-4 border-2 border-gray-300 placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
             placeholder="Enter your name"
@@ -25,7 +26,7 @@ function Contact() {
         <div>
           <label className="block text-white font-semibold">Email</label>
           <input
-          required
+            required
             type="email"
             className="w-full p-4 border-2 placeholder-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
             placeholder="Enter your email"
@@ -49,32 +50,32 @@ function Contact() {
         </button>
       </form>
 
-      {/* Social Links */}
+      {/* Social Links with Icons */}
       <div className="mt-8 text-center">
         <h3 className="text-2xl font-semibold text-white mb-3">Connect with Me</h3>
-        <div className="flex justify-center gap-8">
+        <div className="flex justify-center gap-6">
           <a
             href="https://linkedin.com/in/sourav-nandi01"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 font-bold hover:scale-110 transition-transform"
+            className="text-blue-500 text-3xl hover:scale-110 transition-transform"
           >
-            LinkedIn
+            <FaLinkedin />
           </a>
           <a
             href="https://github.com/DevSourav01"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 font-bold hover:scale-110 transition-transform"
+            className="text-gray-200 text-3xl hover:scale-110 transition-transform"
           >
-            GitHub
+            <FaGithub />
           </a>
           <a
             href="mailto:thugsourav1998@gmail.com"
-            className="text-red-500 font-bold hover:scale-110 transition-transform"
+            className="text-red-500 text-3xl hover:scale-110 transition-transform"
             target="_blank"
           >
-            Email
+            <FaEnvelope />
           </a>
         </div>
       </div>
