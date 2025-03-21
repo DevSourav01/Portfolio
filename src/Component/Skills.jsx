@@ -16,14 +16,14 @@ const skillsData = [
 
 function Skills() {
   return (
-    <div className="skills-container max-w-4xl mx-auto mt-20 p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-4xl font-bold text-gray-800 text-center mb-6">My Skills</h2>
+    <div className="skills-container max-w-4xl mx-auto mt-20 p-6 bg-[rgb(22,22,22)] rounded-lg">
+      <h2 className="text-4xl font-bold text-white text-center mb-6">My Skills</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {skillsData.map((skill, index) => (
-          <div key={index} className="skill-card flex flex-col items-center p-4 bg-gray-100 cursor-pointer rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div key={index} className="skill-card flex flex-col items-center p-4 bg-[rgb(23,23,23)] shadow-md  cursor-pointer rounded-lg  transition-transform transform hover:scale-105">
             <div className="text-5xl mb-2">{skill.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-700">{skill.name}</h3>
+            <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
             <div className="w-full bg-gray-300 h-2 mt-2 rounded-full">
               <div className="bg-blue-500 h-2 rounded-full" style={{ width: skill.level }}></div>
             </div>

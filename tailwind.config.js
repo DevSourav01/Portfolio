@@ -2,14 +2,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: { max: "425px" }, // Corrected: added inside `extend`
+      },
       keyframes: {
         glow: {
-          "0%, 100%": { 
-            boxShadow: "0 0 20px 5px rgba(255, 165, 0, 0.7)" 
-          },
-          "50%": { 
-            boxShadow: "0 0 40px 10px rgba(255, 165, 0, 1)" 
-          },
+          "0%, 100%": { boxShadow: "0 0 20px 5px rgba(255, 165, 0, 0.7)" },
+          "50%": { boxShadow: "0 0 40px 10px rgba(255, 165, 0, 1)" },
         },
       },
       animation: {

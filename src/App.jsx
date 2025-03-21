@@ -1,9 +1,3 @@
-// import Navbar from "./component/Navbar";
-// import Main from "./component/Main";
-// import Skills from "./component/Skills";
-// import Experience from "./component/Experience";
-// import Projects from "./component/Projects";
-// import Contact from "./component/Contact";
 
 import Navbar from "./Component/Navbar";
 

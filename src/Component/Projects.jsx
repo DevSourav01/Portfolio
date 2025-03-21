@@ -37,8 +37,8 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="max-w-5xl mx-auto mt-20 p-10 bg-gray-100 min-h-screen rounded-lg shadow-md">
-      <h2 className="text-5xl font-extrabold text-gray-800 text-center border-l-4 border-amber-500 pl-4 mb-10">
+    <div className="max-w-5xl mx-auto mt-20 p-10 bg-[rgb(22,22,22)] min-h-screen rounded-lg shadow-md">
+      <h2 className="text-5xl font-extrabold text-white text-center border-l-4 border-amber-500 pl-4 mb-10">
         My Projects
       </h2>
       
@@ -46,11 +46,11 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="p-6 bg-white border-l-4 border-amber-500 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"
+            className="p-6 bg-[rgb(23,23,23)] border-l-4 border-amber-500 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"
           >
-            <h3 className="text-3xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-            <p className="text-lg text-gray-600 mb-2">{project.tech}</p>
-            <p className="text-gray-700 mb-4">{project.description}</p>
+            <h3 className="text-3xl font-semibold text-white mb-2">{project.title}</h3>
+            <p className="text-lg text-white mb-2">{project.tech}</p>
+            <p className="text-white mb-4">{project.description}</p>
             <div className="flex gap-4 mt-3">
               <a
                 href={project.git}
