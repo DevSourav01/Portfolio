@@ -30,7 +30,7 @@ function Contact() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-20 p-10 bg-[rgb(22,22,22)] shadow-lg rounded-lg min-h-[60vh] flex flex-col justify-center items-center relative">
+    <div className="max-w-4xl mx-auto mt-20 mb-5 p-10 bg-[rgb(22,22,22)] shadow-lg rounded-lg min-h-[60vh] flex flex-col justify-center items-center relative">
       <h2 className="text-5xl font-extrabold text-white text-center border-l-4 border-amber-500 pl-4 mb-6">
         Contact Me
       </h2>
@@ -45,7 +45,7 @@ function Contact() {
           <input
             required
             type="text"
-            className="w-full p-4 border-2 border-gray-300 placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
+            className="w-full p-4 border-2 border-gray-300 text-white placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
             placeholder="Enter your name"
           />
         </div>
@@ -55,7 +55,7 @@ function Contact() {
           <input
             required
             type="email"
-            className="w-full p-4 border-2 placeholder-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
+            className="w-full p-4 border-2 text-white placeholder-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
             placeholder="Enter your email"
           />
         </div>
@@ -64,7 +64,7 @@ function Contact() {
           <label className="block text-white font-semibold">Message</label>
           <textarea
             rows="5"
-            className="w-full p-4 border-2 placeholder-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
+            className="w-full p-4 border-2 h-32 resize-none text-white placeholder-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-[rgb(30,30,30)]"
             placeholder="Write your message..."
           ></textarea>
         </div>

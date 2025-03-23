@@ -9,8 +9,11 @@ function Main() {
     <div className="main flex flex-col md:flex-row items-center justify-between min-h-screen">
       {/* Left Section */}
       <div className="left w-full md:w-[60vw] p-6 border-l-4 border-amber-500 shadow-md rounded-lg bg-[rgb(22,22,22)]">
-        <h1 className="text-5xl  text-white leading-tight">
-          Hello, I'm <span className="text-amber-500">Sourav Nandi.</span>
+        <h1 className="text-5xl text-white leading-tight">
+          Hello, I'm{" "}
+          <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent animate-pulse">
+            Sourav Nandi.
+          </span>
         </h1>
 
         {/* Typing Animation */}
