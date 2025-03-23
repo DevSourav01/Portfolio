@@ -1,9 +1,36 @@
-import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaWhatsapp,
+  FaArrowUp,
+} from "react-icons/fa";
 
 function Contact() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="max-w-4xl mx-auto mt-20 p-10 bg-[rgb(22,22,22)] shadow-lg rounded-lg min-h-[60vh] flex flex-col justify-center items-center">
+    <div className="max-w-4xl mx-auto mt-20 p-10 bg-[rgb(22,22,22)] shadow-lg rounded-lg min-h-[60vh] flex flex-col justify-center items-center relative">
       <h2 className="text-5xl font-extrabold text-white text-center border-l-4 border-amber-500 pl-4 mb-6">
         Contact Me
       </h2>
@@ -52,7 +79,9 @@ function Contact() {
 
       {/* Social Links with Icons */}
       <div className="mt-8 text-center">
-        <h3 className="text-2xl font-semibold text-white mb-3">Connect with Me</h3>
+        <h3 className="text-2xl font-semibold text-white mb-3">
+          Connect with Me
+        </h3>
         <div className="flex justify-center gap-6">
           <a
             href="https://linkedin.com/in/sourav-nandi01"
@@ -77,8 +106,26 @@ function Contact() {
           >
             <FaEnvelope />
           </a>
+          <a
+            href="https://wa.me/+919064345278"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-500 text-3xl hover:scale-110 transition-transform"
+          >
+            <FaWhatsapp />
+          </a>
         </div>
       </div>
+
+      {/* Back to Top Button */}
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-10 right-10 border-2 text-white p-4 rounded-full shadow-xl hover:bg-amber-600 transition-all duration-300 transform hover:scale-125 animate-bounce"
+        >
+          <FaArrowUp className="text-sm" />
+        </button>
+      )}
     </div>
   );
 }

@@ -16,11 +16,13 @@ function Main() {
         {/* Typing Animation */}
         <TypeAnimation
           sequence={[
-            "<Passionate Frontend Developer />",
+            "<Frontend Developer 🚀 />",
             1500,
-            "<Crafting modern & responsive UIs />",
+            "<React & Tailwind Specialist 🎨 />",
             1500,
-            "<Bringing designs to life with React />",
+            "<Crafting Smooth & Interactive UIs ✨ />",
+            1500,
+            "<Turning Ideas into Reality with Code 💻 />",
             1500,
           ]}
           wrapper="p"
