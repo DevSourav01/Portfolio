@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFilePdf} from "react-icons/fa";
+import { FaFilePdf } from "react-icons/fa";
 
 const certificates = [
   {
@@ -21,38 +21,31 @@ const certificates = [
 
 function Certificate() {
   return (
-    <div className="max-w-5xl mx-auto mt-20 p-10 bg-[rgb(22,22,22)] min-h-screen rounded-lg shadow-md">
-      <h2 className="text-5xl font-extrabold text-white text-center border-l-4 border-amber-500 pl-4 mb-10">
-        Certificate
+    <div className="max-w-6xl mx-auto mt-20 px-6 py-12 bg-[rgba(255,255,255,0.05)] backdrop-blur-md rounded-2xl shadow-lg">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-14 underline decoration-amber-500 underline-offset-8">
+        📜 Certificates
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {certificates.map((cert, index) => (
           <div
             key={index}
-            className="p-6 bg-[rgb(23,23,23)] border-l-4 border-amber-500 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"
+            className="group p-6 rounded-2xl bg-[rgb(23,23,23)] border border-gray-700 hover:border-amber-500 shadow-lg transition-transform hover:-translate-y-1 duration-300"
           >
-            <h3 className="text-3xl font-semibold text-white mb-2">
+            <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-amber-400">
               {cert.title}
             </h3>
-            <p className="text-lg text-gray-400 mb-4">{cert.platform}</p>
+            <p className="text-sm text-gray-400 mb-4">{cert.platform}</p>
 
-            <div className="flex gap-4">
-              {/* View Certificate Button */}
-              <div className="relative group">
-                <a
-                  href={cert.pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all"
-                >
-                  <FaFilePdf className="text-xl" /> View
-                </a>
-                <span className="absolute left-1/2 -top-10 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all">
-                  View
-                </span>
-              </div>
-            </div>
+            <a
+              href={cert.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-400 text-black font-semibold rounded-lg shadow-md hover:from-yellow-400 hover:to-amber-500 transition-all"
+            >
+              <FaFilePdf className="text-lg" />
+              View Certificate
+            </a>
           </div>
         ))}
       </div>

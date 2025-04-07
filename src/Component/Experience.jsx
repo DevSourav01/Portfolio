@@ -16,34 +16,39 @@ function Experience() {
       description:
         "Managed customer interactions and resolved queries effectively. Provided support for technical and non-technical issues.",
     },
+    {
+      company: "Roxonn-FutureTech (Open Source)",
+      role: "Frontend Developer – Open Source Contribution",
+      duration: "March 2025 - April 2025",
+      description:
+        "Independently built and deployed the MediSync Dashboard based on a GitHub issue spec. Used React, TypeScript, and Material UI to create a responsive, accessible, and PWA-ready frontend.",
+    },
   ];
 
   return (
-    <div className="experience-container max-w-5xl mx-auto mt-20 p-10">
-      <h2 className="text-5xl font-extrabold text-white text-center mb-10">
-        Experience
+    <section className="max-w-6xl mx-auto px-6 py-16" id="experience">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-center text-white mb-12">
+        🧑‍💻 Experience
       </h2>
 
-      <div className="space-y-8">
+      <div className="grid gap-10 md:grid-cols-2">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="relative p-6 bg-[rgb(22,22,22)] border border-gray-300 shadow-md rounded-lg transition-transform transform hover:scale-[1.02] hover:shadow-lg duration-300"
+            className="relative border border-gray-700 bg-gradient-to-br from-[#1e1e1e] to-[#111111] rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 hover:scale-[1.02]"
           >
-            {/* Floating Decorative Element */}
-            <div className="absolute -top-2 -left-2 w-4 h-4 bg-blue-500 rounded-full"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-t-2xl" />
 
-            <h3 className="text-3xl font-semibold text-white">{exp.company}</h3>
-            <p className="text-lg text-white font-medium">{exp.role}</p>
-            <p className="text-md text-white italic">{exp.duration}</p>
-            <p className="text-white mt-4 leading-relaxed">{exp.description}</p>
+            <h3 className="text-2xl font-semibold text-white">{exp.company}</h3>
+            <p className="text-lg text-blue-400 font-medium">{exp.role}</p>
+            <p className="text-sm text-gray-400 italic mb-4">{exp.duration}</p>
+            <p className="text-gray-300 leading-relaxed">{exp.description}</p>
 
-            {/* Animated Gradient Bottom Line */}
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-b-2xl" />
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

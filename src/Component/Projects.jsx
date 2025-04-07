@@ -38,57 +38,50 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="max-w-5xl mx-auto mt-20 p-10 bg-[rgb(22,22,22)] min-h-screen rounded-lg shadow-md">
-      <h2 className="text-5xl font-extrabold text-white text-center border-l-4 border-amber-500 pl-4 mb-10">
-        Projects
+    <section className="max-w-6xl mx-auto px-6 py-20" id="projects">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-16 underline decoration-amber-500 underline-offset-8">
+        💼 Projects
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="p-6 bg-[rgb(23,23,23)] border-l-4 border-amber-500 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl"
+            className="group p-6 rounded-2xl border border-gray-700 bg-[rgba(255,255,255,0.05)] backdrop-blur-md shadow-xl hover:shadow-amber-500/30 transition-all duration-300 transform hover:-translate-y-1"
           >
-            <h3 className="text-3xl font-semibold text-white mb-2">{project.title}</h3>
-            <p className="text-lg text-white mb-2">{project.tech}</p>
-            <p className="text-white mb-4">{project.description}</p>
-            <div className="flex gap-4 mt-3">
-              {/* GitHub Button with Tooltip */}
-              <div className="relative group">
-                <a
-                  href={project.git}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition-all"
-                >
-                  <FaGithub className="text-xl" />
-                </a>
-                {/* Tooltip */}
-                <span className="absolute left-1/2 -top-10 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all">
-                  Github
-                </span>
-              </div>
+            <h3 className="text-2xl font-bold text-amber-400 mb-1">
+              {project.title}
+            </h3>
+            <p className="text-sm text-gray-400 mb-3">{project.tech}</p>
+            <p className="text-gray-300 mb-6">{project.description}</p>
 
-              {/* Live Demo Button with Tooltip */}
-              <div className="relative group">
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-4 rounded-lg shadow-md transition-all"
-                >
-                  <FaExternalLinkAlt className="text-xl" />
-                </a>
-                {/* Tooltip */}
-                <span className="absolute left-1/2 -top-10 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-all">
-                  Preview
-                </span>
-              </div>
+            <div className="flex items-center gap-4">
+              {/* GitHub */}
+              <a
+                href={project.git}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition duration-200 shadow-md"
+              >
+                <FaGithub className="text-xl" />
+                <span className="hidden sm:inline">GitHub</span>
+              </a>
+
+              {/* Live */}
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-600 hover:to-yellow-500 text-black font-semibold transition duration-200 shadow-md"
+              >
+                <FaExternalLinkAlt className="text-xl" />
+                <span className="hidden sm:inline">Live</span>
+              </a>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
