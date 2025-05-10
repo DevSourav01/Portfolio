@@ -9,20 +9,7 @@ function Experience() {
       description:
         "Handled customer queries and provided solutions for Flipkart users. Assisted in resolving issues related to orders, payments, and deliveries.",
     },
-    {
-      company: "Conneqt Business Solutions",
-      role: "Customer Support Associate",
-      duration: "April 2024 - July 2024",
-      description:
-        "Managed customer interactions and resolved queries effectively. Provided support for technical and non-technical issues.",
-    },
-    {
-      company: "Roxonn-FutureTech (Open Source)",
-      role: "Frontend Developer – Open Source Contribution",
-      duration: "March 2025 - April 2025",
-      description:
-        "Independently built and deployed the MediSync Dashboard based on a GitHub issue spec. Used React, TypeScript, and Material UI to create a responsive, accessible, and PWA-ready frontend.",
-    },
+   
   ];
 
   return (
