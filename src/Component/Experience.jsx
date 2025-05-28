@@ -3,13 +3,19 @@ import React from "react";
 function Experience() {
   const experiences = [
     {
+      company: "Curetech Services (NEC Project)",
+      role: "Service Desk Engineer",
+      duration: "May 2025 - Present",
+      description:
+        "Managed ~400 cases/month using ServiceNow and 3CLogic, achieving 95% SLA compliance. Troubleshot hardware, software, and network issues, documented solutions in knowledge base, improving team efficiency by 10%. Collaborated with L2 engineers for escalations, ensuring timely resolutions.",
+    },
+    {
       company: "Tech Mahindra",
       role: "Customer Support Associate",
       duration: "June 2022 - November 2023",
       description:
         "Handled customer queries and provided solutions for Flipkart users. Assisted in resolving issues related to orders, payments, and deliveries.",
     },
-   
   ];
 
   return (
