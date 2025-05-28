@@ -115,7 +115,7 @@ function Contact() {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-10 z-50 border-2 text-white p-4 rounded-full shadow-xl hover:bg-amber-600 transition-all duration-300 transform hover:scale-125 animate-bounce"
+          className="fixed bottom-28 right-2 z-50 border-2 text-white p-4 rounded-full shadow-xl hover:bg-amber-600 transition-all duration-300 transform hover:scale-125 animate-bounce"
         >
           <FaArrowUp className="text-sm" />
         </button>

@@ -9,7 +9,7 @@ function Main() {
     <div className="main flex flex-col md:flex-row items-center justify-between min-h-screen">
       {/* Left Section */}
       <div className="left w-full md:w-[60vw] p-6 border-l-4 border-amber-500 shadow-md rounded-lg bg-[rgb(22,22,22)]">
-        <h1 className="text-5xl text-white leading-tight">
+        <h1 className="text-4xl text-white leading-tight">
           Hello, I'm{" "}
           <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent animate-pulse">
             Sourav Nandi.
@@ -19,33 +19,33 @@ function Main() {
         {/* Typing Animation */}
         <TypeAnimation
           sequence={[
-            "<Frontend Developer 🚀 />",
-            1500,
-            "<React & Tailwind Specialist 🎨 />",
-            1500,
-            "<Crafting Smooth & Interactive UIs ✨ />",
-            1500,
-            "<Turning Ideas into Reality with Code 💻 />",
-            1500,
+            "<Frontend Dev 🚀 />",
+            1000,
+            "<React & Tailwind 🎨 />",
+            1000,
+            "<Smooth UIs ✨ />",
+            1000,
+            "<Code to Reality 💻 />",
+            1000,
           ]}
           wrapper="p"
           speed={70}
           repeat={Infinity}
-          className="text-2xl text-white mt-4 font-poppins"
+          className="text-lg text-white mt-4 font-poppins"
           cursor={false}
           render={(text) => <p dangerouslySetInnerHTML={{ __html: text }} />}
         />
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-4 mt-6">
+        <div className="flex gap-3 mt-5">
           <a href="https://drive.google.com/file/d/1UuAw4Akk5QuJcKaBTSxMI50ziubowiJr/view?usp=sharing">
-            <button className="flex items-center gap-2 px-6 py-3 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
+            <button className="flex items-center gap-2 px-4 py-1 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
               <FaDownload /> Download CV
             </button>
           </a>
 
           <a href="mailto:thugsourav1998@gmail.com">
-            <button className="flex items-center gap-2 px-6 py-3 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
+            <button className="flex items-center gap-2 px-6 py-1 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
               <MdWork /> Hire Me
             </button>
           </a>

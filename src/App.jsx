@@ -1,5 +1,4 @@
 import Navbar from "./Component/Navbar";
-
 import Main from "./Component/main";
 import Skills from "./Component/Skills";
 import Experience from "./Component/Experience";
@@ -11,22 +10,22 @@ function App() {
   return (
     <div className="w-[95vw] items-center m-auto">
       <Navbar />
-      <div id="About">
+      <div id="about">
         <Main />
       </div>
-      <div id="Skills">
+      <div id="skills">
         <Skills />
       </div>
-      <div id="Experience">
+      <div id="experience">
         <Experience />
       </div>
-      <div id="Projects">
+      <div id="projects">
         <Projects />
       </div>
-      <div id="Certificate">
+      <div id="certificate">
         <Certificate />
       </div>
-      <div id="Contact">
+      <div id="contact">
         <Contact />
       </div>
     </div>

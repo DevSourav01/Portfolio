@@ -1,67 +1,51 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import icons
+import { TbUserCircle, TbStarFilled, TbBuilding, TbCode, TbAwardFilled, TbMessageCircle } from "react-icons/tb";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false); // State to toggle mobile menu
+  const [activeId, setActiveId] = useState(null);
+
   const navItems = [
-    "About",
-    "Skills",
-    "Experience",
-    "Projects",
-    "Certificate",
-    "Contact",
+    { id: "about", icon: <TbUserCircle />, title: "About" },
+    { id: "skills", icon: <TbStarFilled />, title: "Skills" },
+    { id: "experience", icon: <TbBuilding />, title: "Experience" },
+    { id: "projects", icon: <TbCode />, title: "Projects" },
+    { id: "certificate", icon: <TbAwardFilled />, title: "Certificate" },
+    { id: "contact", icon: <TbMessageCircle />, title: "Contact" },
   ];
 
   const handleScroll = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false); // Close the mobile menu when an item is clicked
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveId(id);
+    } else {
+      console.warn(`Section with ID "${id}" not found. Please ensure the section exists with the correct ID.`);
+    }
   };
 
   return (
-    <>
-      {/* Desktop Navbar (Top) */}
-      <div
-        className="fixed top-5 left-1/2 transform -translate-x-1/2 w-[70vw] max-w-[520px] min-w-[305px] items-center justify-center gap-3 px-6 py-3 
-        bg-transparent backdrop-blur-lg border border-cyan-400 shadow-lg rounded-full z-50 transition-all duration-300 animate-glow hidden sm:flex"
-      >
-        {navItems.map((item) => (
-          <p
-            key={item}
-            onClick={() => handleScroll(item)}
-            className="cursor-pointer text-white text-sm md:text-base lg:text-lg whitespace-nowrap transition-all duration-300 hover:text-cyan-400"
-          >
-            {item}
-          </p>
-        ))}
-      </div>
-
-      {/* Mobile Navbar (Hamburger Icon) */}
-      <div className="fixed top-5 right-5 sm:hidden z-50">
-        <button
-          onClick={() => setMenuOpen(!menuOpen)} // Toggle menu
-          className="text-white text-3xl"
+    <div
+      className="fixed top-5 max-[450px]:bottom-5 max-[450px]:top-auto left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[520px] min-w-[280px] flex items-center justify-center gap-4 px-4 py-2 
+      bg-transparent backdrop-blur-lg border border-cyan-900 shadow-sm rounded-full z-900 transition-all duration-300 animate-glow"
+    >
+      {navItems.map((item, index) => (
+        <div
+          key={index}
+          onClick={() => handleScroll(item.id)}
+          className={`
+            cursor-pointer text-white text-lg sm:text-xl md:text-2xl p-2 rounded-full 
+            ${activeId === item.id 
+              ? 'text-blue-500 bg-amber-500 shadow-md scale-100 rotate-360' 
+              : 'hover:bg-gray-700 hover:shadow-lg hover:text-blue-400 hover:scale-105 hover:rotate-2'
+            } 
+            transition-all duration-300
+          `}
+          title={item.title}
         >
-          {menuOpen ? <FaTimes /> : <FaBars />} {/* Display hamburger or close icon */}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`fixed top-0 left-0 w-full h-full bg-[rgb(23,23,23)] bg-opacity-95 flex flex-col 
-        items-center justify-center gap-6 transition-transform duration-300 ease-in-out 
-        ${menuOpen ? "translate-x-0" : "-translate-x-full"} sm:hidden z-40`}
-      >
-        {navItems.map((item) => (
-          <p
-            key={item}
-            onClick={() => handleScroll(item)}
-            className="text-white text-2xl cursor-pointer transition-all duration-300 hover:text-cyan-400"
-          >
-            {item}
-          </p>
-        ))}
-      </div>
-    </>
+          {item.icon}
+        </div>
+      ))}
+    </div>
   );
 }
 
