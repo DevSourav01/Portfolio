@@ -6,39 +6,30 @@ import { motion, useInView } from "framer-motion";
 // Projects data
 const projects = [
   {
-    title: "Movie Finder",
-    tech: "React, JavaScript, HTML, CSS",
+    title: "GitHub Finder",
+    tech: "React, TypeScript, Tailwind CSS",
     description:
-      "A web app that fetches movie details using an API. Users can search for movies, view ratings, and get recommendations.",
-    git: "https://github.com/DevSourav01/Movie-Finder",
-    live: "https://movie-finder-liart-phi.vercel.app/",
+      "A web app to search any GitHub user by username and view their avatar, bio, location, public repos, followers, and following count. Features a loading spinner, error handling for invalid usernames, and a fully responsive design.",
+    git: "https://github.com/DevSourav01/Github-Finder",
+    live: "https://github-finder-mu-khaki.vercel.app/",
   },
   {
-    title: "E-commerce App",
-    tech: "HTML, CSS, JavaScript",
+    title: "DevConnect",
+    tech: "React, TypeScript, Tailwind CSS, Firebase, Firestore",
     description:
-      "A simple e-commerce frontend with product listings, a shopping cart, and a checkout page.",
-    git: "https://github.com/DevSourav01/E-commerse-App",
-    live: "https://e-commerse-app-alpha.vercel.app/",
+      "A developer networking platform with Firebase Auth, real-time post feed with likes and comments, follow/unfollow connections, skill-based filtering, GitHub repo integration, and protected routes with Firestore security rules.",
+    git: "https://github.com/DevSourav01/DevConnect",
+    live: "https://dev-connect-pied.vercel.app/login",
   },
   {
-    title: "Music Player",
-    tech: "HTML, CSS",
+    title: "CareerSync – HR Dashboard",
+    tech: "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui",
     description:
-      "A minimal music player with basic controls like play, pause, and volume adjustment.",
-    git: "https://github.com/DevSourav01/Music-Player",
-    live: "https://music-player-myn8.vercel.app/",
-  },
-  {
-    title: "BMI Calculator",
-    tech: "HTML, CSS, JavaScript",
-    description:
-      "A web tool that calculates BMI based on user input and provides health recommendations.",
-    git: "https://github.com/DevSourav01/BMI-Calculator",
-    live: "https://bmi-calculator-one-henna.vercel.app/",
+      "An ongoing HR dashboard project built with Next.js and shadcn/ui, designed to streamline recruitment and candidate management workflows.",
+    git: "https://github.com/DevSourav01/Career-Sync-Dashboard",
+    live: "https://career-sync-dashboard.vercel.app/",
   },
 ];
-
 // Parent container variants for staggered animation
 const containerVariants = {
   hidden: {},

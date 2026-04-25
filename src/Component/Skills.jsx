@@ -9,13 +9,17 @@ import {
 } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiRedux,
   SiTypescript,
-  SiOpenai,
+  SiRedux,
   SiReactrouter,
   SiMui,
   SiPwa,
+  SiOpenai,
+  SiNextdotjs,  
+  SiFirebase,
+  SiShadcnui,
 } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 // eslint-disable-next-line no-unused-vars
 import {motion, useInView } from "framer-motion";
 
@@ -23,17 +27,21 @@ import {motion, useInView } from "framer-motion";
 const skillsData = [
   { name: "React", icon: <FaReact className="text-blue-500" />, level: 90 },
   { name: "JavaScript", icon: <FaJs className="text-yellow-500" />, level: 85 },
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-700" />, level: 85 },
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, level: 95 },
   { name: "CSS3", icon: <FaCss3Alt className="text-blue-600" />, level: 90 },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" />, level: 80 },
-  { name: "Redux", icon: <SiRedux className="text-purple-500" />, level: 75 },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-700" />, level: 85 },
-  { name: "Git", icon: <FaGitAlt className="text-red-500" />, level: 85 },
-  { name: "ChatGPT", icon: <SiOpenai className="text-green-500" />, level: 90 },
-  { name: "React Router", icon: <SiReactrouter className="text-pink-600" />, level: 80 },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white" />, level: 70 },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" />, level: 85 },
+  { name: "shadcn/ui", icon: <SiShadcnui className="text-white" />, level: 75 },
   { name: "Material UI", icon: <SiMui className="text-blue-300" />, level: 85 },
+  { name: "Redux", icon: <SiRedux className="text-purple-500" />, level: 75 },
+  { name: "React Router", icon: <SiReactrouter className="text-pink-600" />, level: 80 },
+  { name: "Firebase", icon: <SiFirebase className="text-yellow-500" />, level: 80 },
+  { name: "Firestore", icon: <SiFirebase className="text-orange-400" />, level: 75 },
+  { name: "Git", icon: <FaGitAlt className="text-red-500" />, level: 85 },
   { name: "Responsive Design", icon: <SiPwa className="text-green-400" />, level: 90 },
   { name: "Accessibility", icon: <FaUniversalAccess className="text-orange-300" />, level: 80 },
+  { name: "ChatGPT", icon: <SiOpenai className="text-green-500" />, level: 90 },
   { name: "Error Boundaries", icon: <SiTypescript className="text-indigo-400" />, level: 75 },
   { name: "Offline Support", icon: <SiPwa className="text-yellow-400" />, level: 70 },
 ];

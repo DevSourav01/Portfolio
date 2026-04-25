@@ -38,7 +38,7 @@ function Main() {
 
         {/* Buttons */}
         <div className="flex gap-3 mt-5">
-          <a href="https://drive.google.com/file/d/1UuAw4Akk5QuJcKaBTSxMI50ziubowiJr/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1_kKogjCyqyJOQ0hoKIi39V7C0haXMl2F/view?usp=sharing">
             <button className="flex items-center gap-2 px-4 py-1 bg-amber-500 text-white text-lg cursor-pointer font-semibold rounded-lg hover:bg-amber-600 transition-all duration-300 shadow-lg">
               <FaDownload /> Download CV
             </button>
